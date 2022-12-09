@@ -1,0 +1,21 @@
+{
+  "reports": [
+    {
+      "targets": [
+        {
+          "name": "slack",
+          "inputs": {
+            "url": "https://hooks.slack.com/services/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",
+            "publish": "test-summary"
+          }
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": ["surefire-reports/testng-results.xml"]
+        }
+      ]
+    }
+  ]
+}
