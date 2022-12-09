@@ -35,4 +35,4 @@ jobs:
         run: mvn clean test -DsuiteXmlFile=src/test/resources/${{env.DEFAULT_SUITE }}
 
       - name: Step 6 - Publish results
-        run: sudo npx test-results-reporter publish -c src/main/resources/config.json
+        run: ./test-results-reporter-linux publish -c src/main/resources/config.json
