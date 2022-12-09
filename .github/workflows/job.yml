@@ -36,6 +36,6 @@ jobs:
 
       - name: Step 5 - Publish results
         if: ${{ always() }}
-        run: npx test-results-reporter publish -c test-output/testng-results.xml
+        run: npx test-results-reporter publish -c src/main/resources/config.json
         env:
           SLACK_URL: ${{ secrets.SLACK_URL }}
