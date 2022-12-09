@@ -1,0 +1,25 @@
+name: Example test execution
+
+env:
+  DEFAULT_SUITE: 'smoke.xml'
+
+jobs:
+  build:
+    name: Run tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+
+      - name: Step 1 - Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Step 2 - Setup Java and Maven
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'maven'
+
+      - name: Step 7a - Run tests
+        if: ${{ github.event.inputs.with-test-rail == 'No' }}
+        run: mvn clean test -DsuiteXmlFile=src/test/resources/${{env.DEFAULT_SUITE }}
