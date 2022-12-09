@@ -13,7 +13,7 @@
       "results": [
         {
           "type": "testng",
-          "files": ["/home/runner/work/SlackNotifier/SlackNotifier/target/surefire-reports/testng-results.xml"]
+          "files": ["test-output/testng-results.xml"]
         }
       ]
     }

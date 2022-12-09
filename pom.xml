@@ -49,6 +49,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
+                    <reportsDirectory>./test-output/</reportsDirectory>
                 </configuration>
                 <dependencies>
                     <dependency>
