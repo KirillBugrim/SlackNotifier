@@ -3,6 +3,11 @@ name: Example test execution
 env:
   DEFAULT_SUITE: 'smoke.xml'
 
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   build:
     name: Run tests
