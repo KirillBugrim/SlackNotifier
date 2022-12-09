@@ -26,9 +26,9 @@ jobs:
           cache: 'maven'
 
       - name: Step 3 - Install nodejs
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '12.x'
+          node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Step 4 - Run tests
@@ -36,6 +36,6 @@ jobs:
 
       - name: Step 5 - Publish results
         if: ${{ always() }}
-        run: npx test-results-reporter publish -c src/main/resources/report.json
+        run: npx test-results-reporter publish -c src/main/resources/config.json
         env:
           SLACK_URL: ${{ secrets.SLACK_URL }}
