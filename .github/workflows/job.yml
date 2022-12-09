@@ -25,5 +25,11 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
-      - name: Step 3 - Run tests
+      - name: Step 3 - Install nodejs
+        run: sudo apt install nodejs
+
+      - name: Step 4 - Install test reporter
+        run: sudo npm i test-results-reporter
+
+      - name: Step 5 - Run tests
         run: mvn clean test -DsuiteXmlFile=src/test/resources/${{env.DEFAULT_SUITE }}
