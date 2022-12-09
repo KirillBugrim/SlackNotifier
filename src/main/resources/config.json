@@ -13,7 +13,7 @@
       "results": [
         {
           "type": "testng",
-          "files": ["surefire-reports/testng-results.xml"]
+          "files": ["target/surefire-reports/testng-results.xml"]
         }
       ]
     }
